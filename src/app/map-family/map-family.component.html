@@ -1,0 +1,39 @@
+<br>
+
+<div class="container">
+  <button class="btn btn-primary" (click)="clear()">clear</button>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col col-4">
+      <button class=" btn btn-info" (click)="switch_map_request()">switchMap</button>
+    </div>
+    <div class="col col-4">
+      <button class="btn btn-danger" (click)="concat_map_request()">concatMap</button>
+    </div>
+    <div class="col col-4">
+      <button class="btn btn-success" (click)="merge_map_request()">mergeMap</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col col-4">
+      <div *ngFor="let text of switch_text">
+        {{ text }}
+      </div>
+    </div>
+    <div class="col col-4">
+      <div *ngFor="let text of concat_text">
+        {{ text }}
+      </div>
+    </div>
+    <div class="col col-4">
+      <div *ngFor="let text of merge_text">
+        {{ text }}
+      </div>
+    </div>
+  </div>
+
+</div>
