@@ -1,0 +1,50 @@
+<!--<br>-->
+<!--<nav>-->
+<!--  <button type="button" (click)="toggle()">Toggle Open/Close</button>-->
+<!--</nav>-->
+
+<!--<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">-->
+<!--  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>-->
+<!--</div>-->
+
+<div class="container2">
+  <div class="half-round first"></div>
+  <div class="half-round second"></div>
+</div>
+
+<hr>
+<div class="container">
+  <fa-icon [icon]="faExclamationTriangle"></fa-icon>
+  <br>
+  <fa-icon [icon]="['fas', 'coffee']"></fa-icon>
+  <br>
+  <fa-icon [icon]="['fas', 'exclamation-triangle']"></fa-icon>
+</div>
+
+<hr>
+
+<div class="container3">
+  <div class="text text-background">Loading . . .</div>
+  <div class="text text-color">Loading . . .</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-4">
+      <button class="btn button" (click)="test()">
+        <div class="button_progress" [ngClass]="{'active': isActive}" ></div>
+<!--        <span class="button_progress_text">close</span>-->
+<!--        <span class="button_text" [ngClass]="{'active': isActive}">close</span>-->
+        <div class="container3">
+          <div class="text text-background">Loading . . .</div>
+          <div class="text text-color" [ngClass]="{'active2': isActive}">Loading . . .</div>
+        </div>
+      </button>
+    </div>
+    <div class="col col-4"></div>
+    <div class="col col-4"></div>
+  </div>
+</div>
+
+
+
