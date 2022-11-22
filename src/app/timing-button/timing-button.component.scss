@@ -1,4 +1,3 @@
-
 .open-close-container {
   border: 1px solid #dddddd;
   margin-top: 1em;
@@ -7,9 +6,6 @@
   font-weight: bold;
   font-size: 20px;
 }
-
-
-
 
 .button {
   background: aqua;
@@ -24,16 +20,12 @@
   width: 0;
   top: 0;
   left: 0;
-  transition: width 8s;
+  //transition: width 8s;
   transition-timing-function: linear;
 }
 
 .text {
   white-space: nowrap;
-  //font-family: ;
-  //font-size: 20px;
-  //font-weight: bold;
-  //letter-spacing: 5px;
 }
 
 .text-background {
@@ -46,9 +38,9 @@
   left: 0;
   top: 0;
   width: 0;
-  overflow: auto;
-  transition: width 5.5s;
-  transition-delay: 1.5s;
+  overflow: hidden;
+  //transition: width 5.5s;
+  //transition-delay: 1.5s;
   transition-timing-function: linear;
 }
 /*
@@ -72,13 +64,9 @@ transition-delay: 0.64s;
 .container3 {
   position: relative;
   display: inline-block;
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 .active {
   width: 100%;
-}
-
-.bb{
-  color: blue;
 }

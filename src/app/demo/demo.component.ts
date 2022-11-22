@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {
   trigger,
   state,
@@ -7,6 +7,7 @@ import {
   transition, keyframes
 } from '@angular/animations';
  import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
+import {timeout} from "rxjs";
 
 @Component({
   selector: 'app-demo',
@@ -14,47 +15,58 @@ import {
   styleUrls: ['./demo.component.scss'],
   animations: [
     trigger('openClose', [
+      // ...
       state('open', style({
-        // height: '200px',
-        // opacity: 0.1,
+        height: '200px',
+        opacity: 1,
         backgroundColor: 'yellow'
       })),
       state('closed', style({
-        // height: '100px',
-        // opacity: 0.8,
-        backgroundColor: 'yellow'
+        height: '100px',
+        opacity: 0.8,
+        backgroundColor: 'blue'
       })),
-      transition('open => closed', [
-        animate('5s', keyframes([
-          style({ backgroundColor: "red", offset: 0 }),
-          style({ backgroundColor: "blue", offset: 0.8 }),
-          style({ backgroundColor: "orange", offset: 0.9 }),
-          style({ backgroundColor: "black", offset: 1 })
-        ]))
+      transition('void => open', [
+        animate('2s')
       ]),
       transition('closed => open', [
-        animate('0.5s')
-      ])
-    ])
+        animate('2s')
+      ]),
+    ]),
   ]
 })
-export class DemoComponent implements OnInit {
-
-  isOpen = true;
+export class DemoComponent implements OnInit, AfterViewInit{
   isActive: boolean = false;
 
-  faExclamationTriangle = faExclamationTriangle;
+  text: string = 'close';
+  isTrue = true;
+
+  isOpen = true;
 
   toggle() {
     this.isOpen = !this.isOpen;
   }
 
-  constructor() { }
+  demo() {
+    this.isTrue = !this.isTrue;
+  }
+
+  constructor(private renderer2: Renderer2) {
+  }
+
 
   ngOnInit(): void {
   }
 
   test() {
-    this.isActive = true;
+    this.isActive = !this.isActive ;
+
+  }
+
+  clear() {
+    this.isActive = false;
+  }
+
+  ngAfterViewInit(): void {
   }
 }

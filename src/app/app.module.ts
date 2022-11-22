@@ -10,6 +10,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {faCoffee} from "@fortawesome/free-solid-svg-icons/faCoffee";
 import {faExclamationTriangle} from "@fortawesome/free-solid-svg-icons/faExclamationTriangle";
+import {FormsModule} from "@angular/forms";
+import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
+import { TimingButtonComponent } from './timing-button/timing-button.component';
 
 
 @NgModule({
@@ -18,12 +22,15 @@ import {faExclamationTriangle} from "@fortawesome/free-solid-svg-icons/faExclama
     ForkjoinComponent,
     MapFamilyComponent,
     DemoComponent,
+    HomeComponent,
+    TestComponent,
+    TimingButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     FontAwesomeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

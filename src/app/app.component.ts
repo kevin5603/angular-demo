@@ -9,10 +9,14 @@ import {CalculateService} from "./calculate.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  close= 'close';
 
 
   constructor() {
   }
 
 
+  zz($event: boolean) {
+    console.log('app:' + $event);
+  }
 }
