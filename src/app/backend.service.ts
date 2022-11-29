@@ -6,9 +6,9 @@ import {BehaviorSubject, delay, map, Observable, of, Subject} from "rxjs";
 })
 export class BackendService {
 
-  private switchMapData: Subject<number> = new Subject();
-  private concatMapData: Subject<number> = new Subject();
-  private mergeMapData: Subject<number> = new Subject();
+   switchMapData: Subject<number> = new Subject();
+   concatMapData: Subject<number> = new Subject();
+   mergeMapData: Subject<number> = new Subject();
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class BackendService {
     this.switchMapData.next(n);
   }
 
-  getSwitchMapData() {
+  getSwitchMapData(): Observable<number> {
     return this.switchMapData.asObservable();
   }
 

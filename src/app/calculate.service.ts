@@ -10,7 +10,7 @@ export class CalculateService {
 
   calculate(n: number): Observable<string> {
     return of(n * n).pipe(
-      delay(3000),
+      delay(5000),
       map(res => `${n}的2次方 計算結果為：${res}`)
     );
   }

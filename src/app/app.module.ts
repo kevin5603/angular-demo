@@ -14,6 +14,10 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
 import { TimingButtonComponent } from './timing-button/timing-button.component';
+import { ModalComponent } from './modal/modal.component';
+import { UtilComponent } from './modal/util/util.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TempUtilComponent } from './modal/temp-util/temp-util.component';
 
 
 @NgModule({
@@ -25,12 +29,16 @@ import { TimingButtonComponent } from './timing-button/timing-button.component';
     HomeComponent,
     TestComponent,
     TimingButtonComponent,
+    ModalComponent,
+    UtilComponent,
+    TempUtilComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

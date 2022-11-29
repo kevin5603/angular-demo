@@ -21,7 +21,7 @@ export class MapFamilyComponent implements OnInit {
   constructor(private backendService: BackendService, private calculateService: CalculateService) {
   }
 
-  ngOnInit(): void {
+  call() {
     this.backendService.getSwitchMapData()
       .pipe(
         switchMap(o => this.calculateService.calculate(o))
@@ -30,6 +30,10 @@ export class MapFamilyComponent implements OnInit {
         this.switch_text.push(i);
         console.log(i);
       });
+  }
+
+  ngOnInit(): void {
+    this.call();
 
 
     this.backendService.getConcatMapData()
