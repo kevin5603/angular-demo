@@ -14,6 +14,8 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
 import { TimingButtonComponent } from './timing-button/timing-button.component';
+import {ChildModuleModule} from "./child-module/child-module.module";
+import {environment} from "../environments/environment";
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { TimingButtonComponent } from './timing-button/timing-button.component';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
+    ChildModuleModule.forRoot(environment)
   ],
   providers: [],
   bootstrap: [AppComponent]
