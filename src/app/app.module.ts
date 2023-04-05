@@ -18,6 +18,8 @@ import { ModalComponent } from './modal/modal.component';
 import { UtilComponent } from './modal/util/util.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TempUtilComponent } from './modal/temp-util/temp-util.component';
+import { NotePopoverComponentComponent } from './note-popover-component/note-popover-component.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { TempUtilComponent } from './modal/temp-util/temp-util.component';
     ModalComponent,
     UtilComponent,
     TempUtilComponent,
+    NotePopoverComponentComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

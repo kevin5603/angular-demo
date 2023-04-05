@@ -12,10 +12,10 @@ export class UtilComponent implements OnInit {
   constructor(private activeModal: NgbActiveModal, private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    setTimeout(()=> {
-      console.log('close...');
-      this.activeModal.close({complete: true});
-    }, 2000);
+    // setTimeout(()=> {
+    //   console.log('close...');
+    //   this.activeModal.close({complete: true});
+    // }, 2000);
   }
 
   close() {

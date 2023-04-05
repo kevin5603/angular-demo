@@ -5,18 +5,18 @@ import {state, style} from "@angular/animations";
   selector: 'app-timing-button',
   templateUrl: './timing-button.component.html',
   styleUrls: ['./timing-button.component.scss'],
-  animations: [
-    state('open', style({
-      height: '200px',
-      opacity: 1,
-      backgroundColor: 'yellow'
-    })),
-    state('closed', style({
-      height: '100px',
-      opacity: 0.8,
-      backgroundColor: 'blue'
-    })),
-  ]
+  // animations: [
+  //   state('open', style({
+  //     height: '200px',
+  //     opacity: 1,
+  //     backgroundColor: 'yellow'
+  //   })),
+  //   state('closed', style({
+  //     height: '100px',
+  //     opacity: 0.8,
+  //     backgroundColor: 'blue'
+  //   })),
+  // ]
 
 })
 export class TimingButtonComponent implements OnInit {
@@ -40,14 +40,9 @@ export class TimingButtonComponent implements OnInit {
   }
 
   test() {
-    // this.isActive = !this.isActive;
+    this.isActive = !this.isActive;
     console.log('關掉.....');
     this.trigger.emit(true);
-
-  }
-
-  clear() {
-    this.isActive = false;
   }
 
   ngAfterViewInit(): void {

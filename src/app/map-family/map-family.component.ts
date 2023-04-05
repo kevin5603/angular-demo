@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {BackendService} from "../backend.service";
 import {CalculateService} from "../calculate.service";
 import {concatMap, mergeMap, switchMap} from "rxjs";
@@ -9,6 +9,8 @@ import {concatMap, mergeMap, switchMap} from "rxjs";
   styleUrls: ['./map-family.component.scss']
 })
 export class MapFamilyComponent implements OnInit {
+  @Input()
+  title = 'map family';
   switch_text: string[] = [];
   switch_map_number = 0;
 

@@ -8,32 +8,35 @@ import {
 } from '@angular/animations';
  import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
 import {timeout} from "rxjs";
+import {NgbProgressbarConfig} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.scss'],
-  animations: [
-    trigger('openClose', [
-      // ...
-      state('open', style({
-        height: '200px',
-        opacity: 1,
-        backgroundColor: 'yellow'
-      })),
-      state('closed', style({
-        height: '100px',
-        opacity: 0.8,
-        backgroundColor: 'blue'
-      })),
-      transition('void => open', [
-        animate('2s')
-      ]),
-      transition('closed => open', [
-        animate('2s')
-      ]),
-    ]),
-  ]
+  providers: [NgbProgressbarConfig]
+
+  // animations: [
+  //   trigger('openClose', [
+  //     // ...
+  //     state('open', style({
+  //       height: '200px',
+  //       opacity: 1,
+  //       backgroundColor: 'yellow'
+  //     })),
+  //     state('closed', style({
+  //       height: '100px',
+  //       opacity: 0.8,
+  //       backgroundColor: 'blue'
+  //     })),
+  //     transition('void => open', [
+  //       animate('2s')
+  //     ]),
+  //     transition('closed => open', [
+  //       animate('2s')
+  //     ]),
+  //   ]),
+  // ]
 })
 export class DemoComponent implements OnInit, AfterViewInit{
   isActive: boolean = false;
@@ -49,9 +52,14 @@ export class DemoComponent implements OnInit, AfterViewInit{
 
   demo() {
     this.isTrue = !this.isTrue;
+
   }
 
-  constructor(private renderer2: Renderer2) {
+  constructor(private renderer2: Renderer2, private config: NgbProgressbarConfig) {
+    config.height='120px';
+    config.type='success'
+    config.animated=true;
+    config.showValue=false;
   }
 
 
