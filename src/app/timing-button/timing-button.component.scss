@@ -1,0 +1,72 @@
+.open-close-container {
+  border: 1px solid #dddddd;
+  margin-top: 1em;
+  padding: 20px 20px 0px 20px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button {
+  background: aqua;
+  position: relative;
+  overflow: hidden;
+}
+
+.button_progress {
+  position: absolute;
+  height: 100%;
+  background: dodgerblue;
+  width: 0;
+  top: 0;
+  left: 0;
+  //transition: width 8s;
+  transition-timing-function: linear;
+}
+
+.text {
+  white-space: nowrap;
+}
+
+.text-background {
+  color: black;
+}
+
+.text-color {
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  overflow: hidden;
+  //transition: width 5.5s;
+  //transition-delay: 1.5s;
+  transition-timing-function: linear;
+}
+/*
+transition: width 6.72s;
+文字的跑動時間長度不能跟背景一樣是8s
+因為文字跟背景不同
+背景會多跑前後12px的padding
+因此我們要算出背景跑這2*12px把時間去掉就是我們文字動畫時間長度
+所以按鈕總寬度約為148px / 8s = 每秒前進18.5px
+24/18.5 ~= 1.3
+故文字動畫長度為8-1.3=6.7
+transition-delay: 0.64s;
+這邊時間的算法是 我們已知parent跟child element padding為12px
+因此我們需要知道parent都總寬度/8s 算出每一秒會前進多少px
+所以按鈕總寬度約為148px / 8s = 每秒前進18.5px
+所們需要等待12px才能讓文字跟背景呈現一致，因此12/18.5=0.64s
+
+
+*/
+
+.container3 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.active {
+  width: 100%;
+}

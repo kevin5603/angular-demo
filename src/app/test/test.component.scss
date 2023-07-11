@@ -1,0 +1,130 @@
+.tab {
+  color: black;
+  &.focus {
+    color: #fff;
+    background-color: #007BB3;
+    box-shadow: inset 0 0 1px 1px red;
+  }
+}
+//
+//.button {
+//  background: aqua;
+//  position: relative;
+//  overflow: hidden;
+//}
+//
+//.button:first-child:before {
+//  content: ' ';
+//  position: absolute;
+//  height: 100%;
+//  background: dodgerblue;
+//  width: 0;
+//  top: 0;
+//  left: 0;
+//  transition: width 5s;
+//  transition-timing-function: linear;
+//}
+//
+//.button_progress {
+//  position: absolute;
+//  height: 100%;
+//  background: dodgerblue;
+//  width: 0;
+//  top: 0;
+//  left: 0;
+//  transition: width 5s;
+//  transition-timing-function: linear;
+//}
+//
+//.text {
+//  white-space: nowrap;
+//  font-size: 20px;
+//  font-weight: bold;
+//  letter-spacing: 5px;
+//}
+//
+//.text-background {
+//  color: black;
+//}
+//
+//.text-color {
+//  color: white;
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  width: 0;
+//  overflow: hidden;
+//  transition: width 5s;
+//
+//
+//  transition-timing-function: linear;
+//}
+//
+//.active {
+//  width: 100%;
+//}
+//
+//
+//.container3 {
+//  position: relative;
+//  display: inline-block;
+//}
+//
+//
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn {
+  background: none;
+  border: 2px solid #000000;
+  font-family: 'montserrat', sans-serif;
+  text-transform: uppercase;
+  min-width: 200px;
+  padding: 12px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.3s linear;
+  position: relative;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  transition: transform 0.3s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+
+}
+
+.btn1::before {
+  transform: scaleX(0);
+}
+
+.btn1 {
+
+}
+
+.btn2 {
+
+}

@@ -1,0 +1,31 @@
+<!--<div class="container">-->
+<!--  <button class="tab" (keydown)="test($event)">tab 1</button>-->
+<!--  <button class="btn btn-success" (click)="open()">open modal</button>-->
+<!--  <button class="btn btn-success" popover-component >open nbg popover</button>-->
+
+<ng-template #popContent>Hello, <b>kevin</b>!</ng-template>
+<ng-template #popTitle>Fancy <b>content!!</b></ng-template>
+<button type="button" class="btn btn-outline-secondary" [ngbPopover]="popContent" [popoverTitle]="popTitle">
+  I've got markup and bindings in my popover!
+</button>
+
+
+<!--&lt;!&ndash;  <button class="tab" (keydown)="test($event)">tab 2</button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <button class="tab" (keydown)="test($event)">tab 3</button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <button class="tab" (keydown)="test($event)">tab 4</button>&ndash;&gt;-->
+<!--</div>-->
+
+
+<div id="find" class="container">
+  Num: {{ data.num }}
+  <br>
+  <button >Button 1</button>
+  <button >Button 2</button>
+  <div [appHighlight]="''"  [defaultColor]="myBlue" tabindex="0">Element 1</div>
+  <div tabindex="0">Element 2</div>
+  <p>aaa</p>
+</div>
+<hr>
+<button >Button 1</button>
+<button >Button 2</button>
+
