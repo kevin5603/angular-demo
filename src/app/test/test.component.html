@@ -3,6 +3,12 @@
 <!--  <button class="btn btn-success" (click)="open()">open modal</button>-->
 <!--  <button class="btn btn-success" popover-component >open nbg popover</button>-->
 
+<ng-template #popContent>Hello, <b>kevin</b>!</ng-template>
+<ng-template #popTitle>Fancy <b>content!!</b></ng-template>
+<button type="button" class="btn btn-outline-secondary" [ngbPopover]="popContent" [popoverTitle]="popTitle">
+  I've got markup and bindings in my popover!
+</button>
+
 
 <!--&lt;!&ndash;  <button class="tab" (keydown)="test($event)">tab 2</button>&ndash;&gt;-->
 <!--&lt;!&ndash;  <button class="tab" (keydown)="test($event)">tab 3</button>&ndash;&gt;-->
