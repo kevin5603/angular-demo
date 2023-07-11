@@ -4,6 +4,5 @@ module.exports = {
   reporters: [
     'default'
   ],
-  testResultsProcessor: 'jest-teamcity-reporter',
-  testMatch: ['<rootDir>/test/app/**/*spec.ts']
+  testResultsProcessor: 'jest-teamcity-reporter'
 }
