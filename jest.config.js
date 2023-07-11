@@ -2,7 +2,6 @@ module.exports = {
   preset: "jest-preset-angular",
   testEnvironment: 'jsdom',
   coverageDirectory: '<rootDir>/target/test-result',
-  collectCoverage: true,
   reporters: [
     'default'
   ],
