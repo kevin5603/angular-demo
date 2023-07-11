@@ -1,8 +1,8 @@
 module.exports = {
   coverageDirectory: '<rootDir>/target/test-result',
+  collectCoverage: true,
   reporters: [
-    'default',
-    ['jest-junit', {output: '<rootDir>/target/test-results/TEST-results-jext.xml'}],
+    'default'
   ],
   testResultsProcessor: 'jest-teamcity-reporter',
   testMatch: ['<rootDir>/test/app/**/*spec.ts']
